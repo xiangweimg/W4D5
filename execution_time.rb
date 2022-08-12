@@ -1,21 +1,35 @@
+# def my_min(list)
+#     result = list.first
+#     (0...list.length).each do |idx1|
+        
+#         (0...list.length).each do |idx2| 
+
+#             if list[idx1] < list[idx2] && list[idx1] < result
+#                 result = list[idx1]
+#             end
+
+#         end
+    
+#     end
+#     result
+# end
+
 def my_min(list)
     result = list.first
-    (0...list.length).each do |idx1|
-        
-        (0...list.length).each do |idx2| 
-
-            if list[idx1] < list[idx2] && list[idx1] < result
-                result = list[idx1]
-            end
-
+    i = 0 
+    while i < list.length 
+        if list[i] < result 
+            result = list[i]
         end
-    
+        i += 1
     end
     result
 end
 
 list = [ 0, 3, 5, 4, -5, 10, 1, 90 ]
 p  my_min(list)  # =>  -5
+
+
 
 
     # result
